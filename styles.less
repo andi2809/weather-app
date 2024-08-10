@@ -1,0 +1,114 @@
+body {
+	font-family: "Radio Canada Big", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100vw;
+	min-height: 100vh;
+}
+.container {
+	// sizing
+	width: 450px;
+	max-height: 800px;
+	padding: 48px;
+	box-sizing: border-box;
+	// transition: all 0.5s;
+	transition: display 0.4s, opacity 0.5s linear !important;
+
+	// bg
+	background-image: linear-gradient(
+		to right bottom,
+		#37a4dd,
+		#0093ea,
+		#337df0,
+		#6c60e9,
+		#9d2cd2
+	);
+	border-radius: 12px;
+	// search
+	.search-bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		input {
+			flex-grow: 4;
+			padding: 12px 24px;
+			border-radius: 16px;
+			background-color: white;
+			border: none;
+			&:focus-visible {
+				outline: none;
+			}
+			&::placeholder {
+				color: rgba(86, 86, 86, 0.97);
+			}
+		}
+		.icon-search {
+			background-color: rgb(245, 245, 245);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			transition: all 0.4s;
+			img {
+				width: 16px;
+				height: auto;
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: rgb(204, 204, 204);
+			}
+			&:focus {
+				background-color: rgb(204, 204, 204);
+				cursor: pointer;
+			}
+		}
+	}
+	.error {
+		margin-left: 24px;
+		margin-top: 4px;
+		font-size: 12px;
+		color: white;
+		font-weight: 400;
+		text-align: left;
+		display: none;
+	}
+	.main {
+		margin-bottom: 48px;
+		color: white;
+		font-size: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.icon-weather {
+			width: 170px;
+			height: auto;
+		}
+	}
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: white;
+		font-size: 16px;
+		div {
+			img {
+				width: 48px;
+				height: auto;
+			}
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+		}
+	}
+}
+.weather {
+	transition: all 0.2s;
+	display: none;
+}

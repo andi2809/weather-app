@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+
+		<!-- Link Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Link lesscss -->
+		<link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="search-bar">
+				<input type="text" class="input-search" placeholder="enter city name" />
+				<div class="icon-search">
+					<img src="/images/search.png" alt="icon search" />
+				</div>
+			</div>
+			<div class="error">Invalid city name</div>
+			<div class="weather">
+				<div class="main">
+					<img class="icon-weather" alt="icon weather" />
+					<div><span class="degree"></span>°C</div>
+					<div class="city">jakarta</div>
+				</div>
+				<div class="footer">
+					<div class="humidity">
+						<img
+							src="/images/humidity.png"
+							class="icon-humidity"
+							alt="icon humidity"
+						/>
+						<div class="text-humidity"></div>
+						<div>Humidity</div>
+					</div>
+					<div class="wind-speed">
+						<img
+							src="/images/wind.png"
+							class="icon-wind-speed"
+							alt="icon wind speed"
+						/>
+						<div class="text-wind"></div>
+						<div>Wind Speed</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
