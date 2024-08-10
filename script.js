@@ -19,7 +19,7 @@ const _getWeather = async (city) => {
 			throw new Error("Error when fetching data");
 		}
 		const data = await response.json();
-		console.log(data);
+		// console.log(data);
 		const degree = Math.round(data.main.temp);
 		document.querySelector(".city").innerHTML = data.name;
 		document.querySelector(".degree").innerHTML = degree;
@@ -33,7 +33,7 @@ const _getWeather = async (city) => {
 		document.querySelector(".error").style.display = "none";
 		document.querySelector(".weather").style.display = "block";
 	} catch (error) {
-		console.log(error);
+		// console.log(error);
 		document.querySelector(".error").style.display = "block";
 		document.querySelector(".weather").style.display = "none";
 	}
@@ -42,13 +42,8 @@ const _getWeather = async (city) => {
 inputBtn.addEventListener("click", () => {
 	_getWeather(inputSearch.value);
 });
-// Event listener untuk mendeteksi saat tombol "Enter" ditekan
 inputSearch.addEventListener("keydown", function (event) {
 	if (event.key === "Enter") {
 		_getWeather(inputSearch.value);
 	}
 });
-
-// _getWeather().then(() => {
-// 	console.log(dataCuaca);
-// });
