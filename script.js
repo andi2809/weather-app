@@ -29,7 +29,7 @@ const _getWeather = async (city) => {
 			Math.round(data.wind.speed) + "km/h";
 		document.querySelector(
 			".icon-weather"
-		).src = `images/${data.weather[0].main}.png`;
+		).src = `images/${(data?.weather[0]?.main).toLowerCase()}.png`;
 		document.querySelector(".error").style.display = "none";
 		document.querySelector(".weather").style.display = "block";
 	} catch (error) {
